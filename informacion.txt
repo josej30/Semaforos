@@ -1,0 +1,22 @@
+- Se asume que colores amarillo y rojo-amarillo duran 4 segundos en cada semáforo.
+- Las duraciones de los colores rojos y verdes en intersecciones normales varían
+entre 20 y 70 segundos.
+- Si se suman las duraciones de los colores rojo, verde, amarillo y rojo-amarillo
+el total es de 100 segundos en cada semáforo de cada intersección.
+
+
+El archivo generado por genGrid.py consta de varias partes:
+
+- Un entero N en la primera línea que representa el tamaño del grid.
+- Un entero P que representa el número de calles rápidas.
+	- P líneas que contienen las coordenadas de las P calles rápidas
+- Un entero Q que representa el número de calles peatonales.
+	- Q líneas que contienen las coordenadas de las Q calles peatonales
+- La representacion de las NxN intersecciones de la ciudad: 
+	Cada elemento de la matriz contiene una lista [g,r], 
+	que representa la duración del color verde y rojo respectivamente 
+	de los semáforos de esa intersección.
+
+
+
+

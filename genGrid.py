@@ -49,7 +49,7 @@ outfile.write(N+"\n"+CR+"\n")
 for av in range(0,int(N)):
     city.append([])
     for street in range(0,int(N)):
-        g = random.randint(20,80)
+        g = random.randint(20,70)
         r = 100-g-8
         city[av].append([g,r])
 
@@ -58,8 +58,8 @@ for av in range(0,int(N)):
 # Las calles rapidas tienen el tiempo de luz verde entre 70 y 85 segundos
 #
 for cr in range (0,int(CR)):
-    coordx = random.randint(0,int(N))
-    coordy = random.randint(0,int(N))
+    coordx = random.randint(0,int(N)-1)
+    coordy = random.randint(0,int(N)-1)
     # 0 = horizontal, 1 = vertical
     sentido = random.randint(0,1)
 
@@ -78,10 +78,10 @@ for cr in range (0,int(CR)):
                     found = 1
             elif (coordx-longitud>0):
                 for i in range(coordx,coordx-longitud,-1):
-                    outfile.write(str(coordy)+","+str(i)+" ")
+                    outfile.write(str(i)+","+str(coordy)+" ")
                     g = random.randint(70,85)
                     r = 100-g-8
-                    city[i][coordy] = [g,r]
+                    city[coordy][i] = [g,r]
                     found = 1
         else:
             if (coordy+longitud<int(N)):
@@ -93,10 +93,10 @@ for cr in range (0,int(CR)):
                     found = 1
             elif (coordy-longitud>0):
                 for i in range(coordy,coordy-longitud,-1):
-                    outfile.write(str(i)+","+str(coordx)+" ")
+                    outfile.write(str(coordx)+","+str(i)+" ")
                     g = random.randint(70,85)
                     r = 100-g-8
-                    city[coordx][i] = [g,r]
+                    city[i][coordx] = [g,r]
                     found = 1
         if (found == 1):
             break
@@ -109,8 +109,8 @@ for cr in range (0,int(CR)):
 #
 outfile.write(CP+'\n')
 for cp in range (0,int(CP)):
-    coordx = random.randint(0,int(N))
-    coordy = random.randint(0,int(N))
+    coordx = random.randint(0,int(N)-1)
+    coordy = random.randint(0,int(N)-1)
     # 0 = horizontal, 1 = vertical
     sentido = random.randint(0,1)
 
@@ -122,14 +122,14 @@ for cp in range (0,int(CP)):
         if (sentido==0):
             if (coordx+longitud<int(N)):
                 for i in range(coordx,coordx+longitud):
-                    outfile.write(str(coordy)+","+str(i)+" ")
+                    outfile.write(str(i)+","+str(coordy)+" ")
                     r = random.randint(70,85)
                     g = 100-r-8
                     city[i][coordy] = [g,r]
                     found = 1
             elif (coordx-longitud>0):
                 for i in range(coordx,coordx-longitud,-1):
-                    outfile.write(str(coordy)+","+str(i)+" ")
+                    outfile.write(str(i)+","+str(coordy)+" ")
                     r = random.randint(70,85)
                     g = 100-r-8
                     city[i][coordy] = [g,r]
@@ -137,14 +137,14 @@ for cp in range (0,int(CP)):
         else:
             if (coordy+longitud<int(N)):
                 for i in range(coordy,coordy+longitud):                
-                    outfile.write(str(i)+","+str(coordx)+" ")
+                    outfile.write(str(coordx)+","+str(i)+" ")
                     r = random.randint(70,85)
                     g = 100-r-8
                     city[coordx][i] = [g,r]
                     found = 1
             elif (coordy-longitud>0):
                 for i in range(coordy,coordy-longitud,-1):
-                    outfile.write(str(i)+","+str(coordx)+" ")
+                    outfile.write(str(coordx)+","+str(i)+" ")
                     r = random.randint(70,85)
                     g = 100-r-8
                     city[coordx][i] = [g,r]

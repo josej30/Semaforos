@@ -1,0 +1,47 @@
+Planificación de conducción en 
+un grid de calles con semaforos.
+
+Obj: usar planificacion temporal y planificación
+clásica para obtener rutas que permitan
+llegar de un punto a otro.
+
+Req mínimos:
+* Dado grid de entrada.
+* Usando planificación clásica,
+obtener rutas.
+* Usando planificación temporal,
+obtener rutas.
+
+Más:
+* Usar varios planificadores temporales
+y clásicos.
+* Comparar tiempo de obtencion del plan
+y calidad del plan entre dif planificadores.
+
+COMO MODELAR EN PLANIFICACION CLASICA:
+* usar proposiciones t_1, t_2, t_6,
+para representar el tiempo.
+Luego ir cambiando el estado de los semaforos.
+
+Tener accion que cambie todos los semaforos por turno.
+
+
+REQUERIMIENTOS TECNICOS:
+
+Formato de entrada:
+Descripcion del grid, con duracion
+en cada estado.
+
+Generador de grids:
+tome N, numero de calles rapidas,
+numero de calles peatonales.
+
+Planificadores clásicos:
+- FF google: ff planner
+- LAMA google: lama planner
+
+Planificadores temporal.
+- los mejores de la IPC-2008.
+Ver:
+http://ipc.informatik.uni-freiburg.de/Presentations?action=AttachFile&do=view&target=planner-poster.pdf
+

@@ -1,8 +1,7 @@
-- Se asume que colores amarillo y rojo-amarillo duran 4 segundos en cada semáforo.
 - Las duraciones de los colores rojos y verdes en intersecciones normales varían
-entre 20 y 70 segundos.
-- Si se suman las duraciones de los colores rojo, verde, amarillo y rojo-amarillo
-el total es de 100 segundos en cada semáforo de cada intersección.
+entre 2 y 8 segundos.
+- Si se suman las duraciones de los colores rojo, verde
+el total es de 10 segundos en cada semáforo de cada intersección.
 
 
 El archivo generado por genGrid.py consta de varias partes:

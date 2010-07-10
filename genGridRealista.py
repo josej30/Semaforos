@@ -3,6 +3,8 @@
 ###############################################
 #                                             #
 # Generador de Grids (ciudades con semaforos) #
+# Esta version es realista ya que genera      #
+# intersecciones coherentes en tiempo.        #
 # Recibe:                                     #
 # N: tamano del grid (NxN)                    #
 # CR: Numero de calles rapidas                #
@@ -49,17 +51,27 @@ for av in range(0,int(N)):
     city.append([])
     inter = []
     for street in range(0,int(N)):
-        inter = []
-        for i in range(0,4):
-            # Se determinan las luces de las intersecciones
-            g = random.randint(2,8)
-            r = 10-g
-            inter.append([g,r])
+        # Se determina la luz del norte
+        g1 = random.randint(3,6)
+        r1 = 10-g1
+        inter.append([g1,r1])
+        # Se determina la luz del este
+        g2 = random.randint(1,10-g1-2)
+        r2 = 10-g2
+        inter.append([g2,r2])
+        # Se determina la luz del sur
+        g3 = random.randint(1,10-g1-g2-1)
+        r3 = 10-g3
+        inter.append([g3,r3])
+        # Se determina la luz del oeste
+        g4 = random.randint(1,10-g1-g2-g3)
+        r4 = 10-g4
+        inter.append([g4,r4])
         city[av].append(inter)
 
 #
 # Se generan las calles rapidas aleatoriamente
-# Las calles rapidas tienen el tiempo de luz verde en 9 segundos
+# Las calles rapidas tienen el tiempo de luz verde en 7 segundos
 #
 for cr in range (0,int(CR)):
     coordx = random.randint(0,int(N)-1)
@@ -76,27 +88,31 @@ for cr in range (0,int(CR)):
             if (coordx+longitud<int(N)):
                 for i in range(coordx,coordx+longitud):
                     outfile.write(str(coordy)+","+str(i)+" ")
-                    inter = [[9,1],[9,1],[9,1],[9,1]]
-                    city[i][coordy] = inter                    
+                    g = random.randint(8,9)
+                    r = 10-g
+                    city[i][coordy] = [g,r]
                     found = 1
             elif (coordx-longitud>0):
                 for i in range(coordx,coordx-longitud,-1):
                     outfile.write(str(i)+","+str(coordy)+" ")
-                    inter = [[9,1],[9,1],[9,1],[9,1]]
-                    city[coordy][i] = inter
+                    g = random.randint(8,9)
+                    r = 10-g
+                    city[coordy][i] = [g,r]
                     found = 1
         else:
             if (coordy+longitud<int(N)):
                 for i in range(coordy,coordy+longitud):                
                     outfile.write(str(i)+","+str(coordx)+" ")
-                    inter = [[9,1],[9,1],[9,1],[9,1]]
-                    city[coordx][i] = inter
+                    g = random.randint(8,9)
+                    r = 10-g
+                    city[coordx][i] = [g,r]
                     found = 1
             elif (coordy-longitud>0):
                 for i in range(coordy,coordy-longitud,-1):
                     outfile.write(str(coordx)+","+str(i)+" ")
-                    inter = [[9,1],[9,1],[9,1],[9,1]]
-                    city[i][coordx] = inter
+                    g = random.randint(8,9)
+                    r = 10-g
+                    city[i][coordx] = [g,r]
                     found = 1
         if (found == 1):
             break
@@ -123,39 +139,42 @@ for cp in range (0,int(CP)):
             if (coordx+longitud<int(N)):
                 for i in range(coordx,coordx+longitud):
                     outfile.write(str(i)+","+str(coordy)+" ")
-                    inter = [[1,9],[1,9],[1,9],[1,9]]
-                    city[i][coordy] = inter
+                    r = random.randint(8,9)
+                    g = 10-r
+                    city[i][coordy] = [g,r]
                     found = 1
             elif (coordx-longitud>0):
                 for i in range(coordx,coordx-longitud,-1):
                     outfile.write(str(i)+","+str(coordy)+" ")
-                    inter = [[1,9],[1,9],[1,9],[1,9]]
-                    city[i][coordy] = inter
+                    r = random.randint(8,9)
+                    g = 10-r
+                    city[i][coordy] = [g,r]
                     found = 1
         else:
             if (coordy+longitud<int(N)):
                 for i in range(coordy,coordy+longitud):                
                     outfile.write(str(coordx)+","+str(i)+" ")
-                    inter = [[1,9],[1,9],[1,9],[1,9]]
-                    city[coordx][i] = inter
+                    r = random.randint(8,9)
+                    g = 10-r
+                    city[coordx][i] = [g,r]
                     found = 1
             elif (coordy-longitud>0):
                 for i in range(coordy,coordy-longitud,-1):
                     outfile.write(str(coordx)+","+str(i)+" ")
-                    inter = [[1,9],[1,9],[1,9],[1,9]]
-                    city[coordx][i] = inter
+                    r = random.randint(8,9)
+                    g = 10-r
+                    city[coordx][i] = [g,r]
                     found = 1
         if (found == 1):
             break
     outfile.write("\n")
 
-# Se escribe la matriz con todas las intersecciones separadas por
-# el caracter "-" en el archivo de salida
+
+
 for av in city:
     for i in av:
         for j in i:
-            outfile.write(str(j))
-        outfile.write("-")
+            outfile.write(str(j)+" ")
     outfile.write("\n")
 
 outfile.close()

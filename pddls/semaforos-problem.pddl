@@ -2,11 +2,11 @@
 
 (:domain SEMAFOROS)
 
-(:objects D B A C - semaforo)
+(:objects A - semaforo)
 
 (:INIT 	(turno_carro) 
 	(carro_0_0))
 
-(:goal (carro_2_0) )
+(:goal (carro_2_2) )
 
 )

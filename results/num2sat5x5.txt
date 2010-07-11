@@ -1,0 +1,468 @@
+
+
+
+
+
+ff: parsing domain file
+domain 'SEMAFOROS' defined
+ ... done.
+ff: parsing problem file
+problem 'SEMAFOROS-GRID' defined
+ ... done.
+
+
+RPG layer 0: 3 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 0: 3 vars, 3 clauses mean size 1.00 max size 1
+RPG layer 0: 2 actions, 2 effects
+RPG layer 1: 7 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 1: 14 vars, 31 clauses mean size 2.03 max size 4
+RPG layer 1: 10 actions, 14 effects
+RPG layer 2: 17 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 2: 55 vars, 232 clauses mean size 2.17 max size 10
+RPG layer 2: 26 actions, 58 effects
+RPG layer 3: 32 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 3: 171 vars, 1016 clauses mean size 2.20 max size 20
+RPG layer 3: 50 actions, 152 effects
+RPG layer 4: 52 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 4: 425 vars, 3115 clauses mean size 2.21 max size 34
+RPG layer 4: 80 actions, 315 effects
+RPG layer 5: 73 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 5: 893 vars, 7486 clauses mean size 2.21 max size 50
+RPG layer 5: 110 actions, 520 effects
+RPG layer 6: 91 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 6: 1614 vars, 14589 clauses mean size 2.22 max size 64
+RPG layer 6: 134 actions, 746 effects
+RPG layer 7: 104 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 7: 2598 vars, 24287 clauses mean size 2.22 max size 74
+RPG layer 7: 150 actions, 932 effects
+RPG layer 8: 112 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 8: 3792 vars, 35894 clauses mean size 2.23 max size 80
+Goal reached at 8!
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+restarts              : 0
+conflicts             : 0              (0 /sec)
+decisions             : 0              (0 /sec)
+propagations          : 7              (350 /sec)
+conflict literals     : 0              (-nan % deleted)
+Memory used           : 4.59 MB
+CPU time              : 0.020001 s
+
+UNSATISFIABLE
+
+RPG layer 8: 158 actions, 1084 effects
+RPG layer 9: 115 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 9: 5149 vars, 48524 clauses mean size 2.24 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |   41179   108351 |   13726       0        0    -nan |  0.000 % |
+==============================================================================
+restarts              : 1
+conflicts             : 3              (83 /sec)
+decisions             : 107            (2972 /sec)
+propagations          : 5742           (159491 /sec)
+conflict literals     : 2              (0.00 % deleted)
+Memory used           : 4.86 MB
+CPU time              : 0.036002 s
+
+UNSATISFIABLE
+
+RPG layer 9: 160 actions, 1185 effects
+RPG layer 10: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 10: 6610 vars, 61663 clauses mean size 2.24 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |   54315   138183 |   18105       0        0    -nan |  0.000 % |
+==============================================================================
+restarts              : 1
+conflicts             : 12             (273 /sec)
+decisions             : 270            (6136 /sec)
+propagations          : 17651          (401141 /sec)
+conflict literals     : 595            (2.94 % deleted)
+Memory used           : 5.16 MB
+CPU time              : 0.044002 s
+
+UNSATISFIABLE
+
+RPG layer 10: 160 actions, 1265 effects
+RPG layer 11: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 11: 8151 vars, 75203 clauses mean size 2.25 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |   67855   169058 |   22618       0        0    -nan |  0.000 % |
+==============================================================================
+restarts              : 1
+conflicts             : 37             (578 /sec)
+decisions             : 727            (11359 /sec)
+propagations          : 56466          (882226 /sec)
+conflict literals     : 1415           (36.83 % deleted)
+Memory used           : 5.48 MB
+CPU time              : 0.064004 s
+
+UNSATISFIABLE
+
+RPG layer 11: 160 actions, 1265 effects
+RPG layer 12: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 12: 9692 vars, 88743 clauses mean size 2.25 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |   81395   199933 |   27131       0        0    -nan |  0.000 % |
+==============================================================================
+restarts              : 1
+conflicts             : 71             (845 /sec)
+decisions             : 676            (8047 /sec)
+propagations          : 134463         (1600655 /sec)
+conflict literals     : 1530           (7.78 % deleted)
+Memory used           : 5.71 MB
+CPU time              : 0.084005 s
+
+UNSATISFIABLE
+
+RPG layer 12: 160 actions, 1265 effects
+RPG layer 13: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 13: 11233 vars, 102283 clauses mean size 2.26 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |   94935   230808 |   31645       0        0    -nan |  0.000 % |
+==============================================================================
+restarts              : 1
+conflicts             : 98             (1021 /sec)
+decisions             : 1915           (19947 /sec)
+propagations          : 202984         (2114285 /sec)
+conflict literals     : 5146           (26.11 % deleted)
+Memory used           : 5.95 MB
+CPU time              : 0.096006 s
+
+UNSATISFIABLE
+
+RPG layer 13: 160 actions, 1265 effects
+RPG layer 14: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 14: 12774 vars, 115823 clauses mean size 2.26 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  108475   261683 |   36158       0        0    -nan |  0.000 % |
+|       100 |  108489   261683 |   39773      85    12625   148.5 |  1.441 % |
+==============================================================================
+restarts              : 2
+conflicts             : 200            (820 /sec)
+decisions             : 4698           (19253 /sec)
+propagations          : 529798         (2171170 /sec)
+conflict literals     : 13607          (19.85 % deleted)
+Memory used           : 6.27 MB
+CPU time              : 0.244015 s
+
+UNSATISFIABLE
+
+RPG layer 14: 160 actions, 1265 effects
+RPG layer 15: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 15: 14315 vars, 129363 clauses mean size 2.26 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  122015   292558 |   40671       0        0    -nan |  0.000 % |
+|       100 |  122020   292558 |   44738      94    15492   164.8 |  1.964 % |
+==============================================================================
+restarts              : 2
+conflicts             : 197            (1048 /sec)
+decisions             : 8199           (43609 /sec)
+propagations          : 282419         (1502141 /sec)
+conflict literals     : 26863          (25.31 % deleted)
+Memory used           : 6.69 MB
+CPU time              : 0.188011 s
+
+UNSATISFIABLE
+
+RPG layer 15: 160 actions, 1265 effects
+RPG layer 16: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 16: 15856 vars, 142903 clauses mean size 2.26 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  135555   323433 |   45185       0        0    -nan |  0.000 % |
+|       100 |  135562   323433 |   49703      92     8502    92.4 |  1.161 % |
+==============================================================================
+restarts              : 2
+conflicts             : 227            (1051 /sec)
+decisions             : 4535           (20994 /sec)
+propagations          : 635601         (2942420 /sec)
+conflict literals     : 12178          (30.51 % deleted)
+Memory used           : 6.86 MB
+CPU time              : 0.216013 s
+
+UNSATISFIABLE
+
+RPG layer 16: 160 actions, 1265 effects
+RPG layer 17: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 17: 17397 vars, 156443 clauses mean size 2.27 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  149095   354308 |   49698       0        0    -nan |  0.000 % |
+|       100 |  149096   354308 |   54667      98    10226   104.3 |  1.058 % |
+|       250 |  145021   353537 |   60134     220    22097   100.4 |  4.087 % |
+|       475 |  142758   352995 |   66148     426    41130    96.5 |  7.248 % |
+|       812 |  117180   346544 |   72762     446    37651    84.4 | 23.642 % |
+==============================================================================
+restarts              : 5
+conflicts             : 819            (1796 /sec)
+decisions             : 11731          (25724 /sec)
+propagations          : 1594462        (3496413 /sec)
+conflict literals     : 55488          (29.80 % deleted)
+Memory used           : 7.21 MB
+CPU time              : 0.456028 s
+
+UNSATISFIABLE
+
+RPG layer 17: 160 actions, 1265 effects
+RPG layer 18: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 18: 18938 vars, 169983 clauses mean size 2.27 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  162635   385183 |   54211       0        0    -nan |  0.000 % |
+|       100 |  162640   385183 |   59632      89    10955   123.1 |  1.558 % |
+|       250 |  134490   378426 |   65595     163    21085   129.4 | 16.285 % |
+|       475 |  108574   370764 |   72154     262    25205    96.2 | 35.326 % |
+==============================================================================
+restarts              : 4
+conflicts             : 484            (1407 /sec)
+decisions             : 10934          (31783 /sec)
+propagations          : 1260444        (3663858 /sec)
+conflict literals     : 31725          (24.61 % deleted)
+Memory used           : 7.53 MB
+CPU time              : 0.344021 s
+
+UNSATISFIABLE
+
+RPG layer 18: 160 actions, 1265 effects
+RPG layer 19: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 19: 20479 vars, 183523 clauses mean size 2.27 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  176175   416058 |   58725       0        0    -nan |  0.000 % |
+|       100 |  176176   416058 |   64597      98    31246   318.8 |  0.899 % |
+|       250 |  172638   413339 |   71057     213    60249   282.9 |  5.088 % |
+|       476 |  168607   412570 |   78162     421    94672   224.9 |  5.918 % |
+|       813 |  166210   412134 |   85979     740   132769   179.4 |  6.621 % |
+|      1321 |  159003   410671 |   94577    1138   158442   139.2 | 11.671 % |
+==============================================================================
+restarts              : 6
+conflicts             : 1929           (1347 /sec)
+decisions             : 35789          (24991 /sec)
+propagations          : 4232883        (2955740 /sec)
+conflict literals     : 228876         (33.79 % deleted)
+Memory used           : 8.50 MB
+CPU time              : 1.43209 s
+
+UNSATISFIABLE
+
+RPG layer 19: 160 actions, 1265 effects
+RPG layer 20: 116 facts
+             0 fluents,     -nan mean 0 max values
+             0 constraints, -nan mean 0 max satisfying value tuples
+             0 psis,        -nan mean 0 max satisfying value tuples
+CNF layer 20: 22020 vars, 197063 clauses mean size 2.27 max size 82
+Invoking SAT solver, command:
+~/num2sat/solvers/minisat/MiniSat_v1.14/minisat CNF
+failed with path ~/num2sat, trying with .
+
+Invoking SAT solver, command:
+./solvers/minisat/MiniSat_v1.14/minisat CNF
+==================================[MINISAT]===================================
+| Conflicts |     ORIGINAL     |              LEARNT              | Progress |
+|           | Clauses Literals |   Limit Clauses Literals  Lit/Cl |          |
+==============================================================================
+|         0 |  189715   446933 |   63238       0        0    -nan |  0.000 % |
+|       100 |  189716   446933 |   69561      98     9135    93.2 |  0.836 % |
+|       251 |  185948   446242 |   76517     229    22395    97.8 |  2.816 % |
+|       476 |  176775   444120 |   84169     384    41042   106.9 | 15.272 % |
+==============================================================================
+restarts              : 4
+conflicts             : 757            (1371 /sec)
+decisions             : 26468          (47946 /sec)
+propagations          : 1898447        (3439004 /sec)
+conflict literals     : 78919          (23.88 % deleted)
+Memory used           : 8.47 MB
+CPU time              : 0.552034 s
+
+SATISFIABLE
+
+
+Found plan:
+Time    0: CARRO_0_0
+Time    1: SEM-I00-I01
+Time    2: CARRO_0_0
+Time    3: SEM-I00-I01
+Time    4: CARRO_0_0
+Time    5: SEM-I00-I01
+Time    6: CARRO_0_1
+Time    7: SEM-I01-I11
+Time    8: CARRO_1_1
+Time    9: SEM-I11-I21
+Time   10: CARRO_2_1
+Time   11: SEM-I21-I22
+Time   12: CARRO_2_2
+Time   13: SEM-I22-I23
+Time   14: CARRO_2_3
+Time   15: SEM-I23-I24
+Time   16: CARRO_2_4
+Time   17: SEM-I24-I34
+Time   18: CARRO_3_4
+Time   19: SEM-I34-I44
+
+time spent:    0.11 seconds instantiating 80 easy, 625 hard action templates
+               0.00 seconds reachability analysis, yielding 116 facts and 160 actions
+               0.00 seconds creating final representation with 116 relevant facts, 0 relevant fluents
+               0.04 seconds building RPG
+               0.11 seconds building CNF
+               3.78 seconds SAT solving
+               4.04 seconds total time, parallel plan length 20 nr actions 20
+

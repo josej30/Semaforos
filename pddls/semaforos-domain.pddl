@@ -15,6 +15,7 @@
 		(carro_2_0)
 		(carro_2_1)
 		(carro_2_2)
+		(t0) (t1) (t2) (t3) (t4) (t5) (t6) (t7) (t8) (t9)
 		(turno_carro)
 		(turno_sem)
 	       )
@@ -224,9 +225,21 @@
 
   (:action sem
 	     :parameters ()
-	     :precondition (turno_sem)
+	     :precondition (and (turno_sem))
 	     :effect
 	     (and (not (turno_sem))
-		   (turno_carro)))
+		(turno_carro)
+		(when (t0) (and (t1) (not (t0))))
+		(when (t1) (and (t2) (not (t1))))
+		(when (t2) (and (t3) (not (t2))))
+		(when (t3) (and (t4) (not (t3))))
+		(when (t4) (and (t5) (not (t4))))
+		(when (t5) (and (t6) (not (t5))))
+		(when (t6) (and (t7) (not (t6))))
+		(when (t7) (and (t8) (not (t7))))
+		(when (t8) (and (t9) (not (t8))))
+		(when (t9) (and (t0) (not (t9))))
+	     )
+  )
 
 )

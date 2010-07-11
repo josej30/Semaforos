@@ -8,6 +8,6 @@
 	(carro_0_0)
 	(t0))
 
-(:goal (carro_2_2) )
+(:goal (and (carro_2_2) (turno_carro)))
 
 )

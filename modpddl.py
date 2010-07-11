@@ -15,7 +15,7 @@ import sys
 import re
 
 def uso():
-    print "USO: <grid> <dominio pddl>"
+    print "USO: ./modpddl.py <grid> <dominio pddl>"
 
 if (len(sys.argv)!=3):
     uso()
@@ -55,7 +55,7 @@ fpddl = open(pddl,"r")
 
 # Se abre el archivo temporal que
 # contendra el nuevo pddl
-fnew = open("newpddl","w")
+fnew = open(".newpddl","w")
 
 found = 0
 
@@ -99,8 +99,12 @@ for line in fpddl:
 
             found = -1
 
+fnew.close()
+fgrid.close()
+fpddl.close()
 
-os.system("mv newpddl "+pddl)
+os.system("cp "+pddl+" .origpddl")
+os.system("mv .newpddl "+pddl)
 
 
 

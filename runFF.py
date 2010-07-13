@@ -59,11 +59,13 @@ for i in range(0,N):
                 step = spliteo[0]
                 step = step.lstrip()
             else:
+                step = int(step)
+                step = (step/2)+1
                 res.append(step)
                 break
             
 for i in res:
-    fresult.write(i+" ")
+    fresult.write(str(i)+" ")
 fresult.write("\n\nPromedio: \n")
 
 sum = 0

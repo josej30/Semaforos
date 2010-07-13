@@ -1,0 +1,70 @@
+
+ff: parsing domain file
+domain 'SEMAFOROS' defined
+ ... done.
+ff: parsing problem file
+problem 'SEMAFOROS-GRID' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    4 into depth [1][2]
+
+Enforced Hill-climbing failed !
+switching to Best-first Search now.
+
+advancing to distance :    4
+                           3
+                           2
+                           1
+                           0
+
+ff: found legal plan as follows
+
+step    0: CARRO_0_0
+        1: SEM I00 I01
+        2: CARRO_0_0
+        3: SEM I00 I01
+        4: CARRO_0_0
+        5: SEM I00 I01
+        6: CARRO_0_0
+        7: SEM I00 I01
+        8: CARRO_0_0
+        9: SEM I00 I01
+       10: CARRO_0_0
+       11: SEM I00 I01
+       12: CARRO_0_0
+       13: SEM I00 I01
+       14: CARRO_0_0
+       15: SEM I00 I10
+       16: CARRO_1_0
+       17: SEM I10 I11
+       18: CARRO_1_1
+       19: SEM I11 I12
+       20: CARRO_1_2
+       21: SEM I12 I22
+       22: CARRO_1_2
+       23: SEM I12 I22
+       24: CARRO_1_2
+       25: SEM I12 I22
+       26: CARRO_1_2
+       27: SEM I12 I22
+       28: CARRO_1_2
+       29: SEM I12 I22
+       30: CARRO_1_2
+       31: SEM I12 I22
+       32: CARRO_1_2
+       33: SEM I12 I22
+       34: CARRO_1_2
+       35: SEM I12 I22
+       36: CARRO_1_2
+       37: SEM I12 I22
+     
+
+time spent:    0.01 seconds instantiating 24 easy, 81 hard action templates
+               0.00 seconds reachability analysis, yielding 44 facts and 48 actions
+               0.00 seconds creating final representation with 44 relevant facts
+               0.00 seconds building connectivity graph
+               0.00 seconds searching, evaluating 74 states, to a max depth of 2
+               0.01 seconds total time
+

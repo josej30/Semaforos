@@ -13,6 +13,7 @@
 import os
 import sys
 import re
+import random
 
 def uso():
     print "USO: ./genPddl.py <grid> <outfile>"
@@ -152,28 +153,76 @@ for i in range (0,n-1):
         # Saco los vecinos de cada interseccion
         if (i-1>=0):           
             reds = ""
-            r = int(city[i][j][0][1])
-            for cont in range(0,r):
+            r = int(city[j][i][0][1])
+            
+            # Se asignan los tiempos de manera aleatoria
+            ciclo = []
+            start = random.randint(0,9)
+            cont = 0
+            while cont < r:
+                if (start+cont>=10):
+                    ciclo.append(start+cont-10)
+                else:
+                    ciclo.append(start+cont)
+                cont+=1
+
+            for cont in ciclo:
                 reds = reds+"(t"+str(cont)+") "
-            outfile.write("\t(when (and (= ?destino i"+str(i)+str(j)+") (= ?origen i"+str(i-1)+str(j)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j)+")) (carro_"+str(i-1)+"_"+str(j)+")) )\n")
+            outfile.write("\t(when (and (= ?origen i"+str(i)+str(j)+") (= ?destino i"+str(i-1)+str(j)+") (or "+reds+")) (and (not (carro_"+str(i-1)+"_"+str(j)+")) (carro_"+str(i)+"_"+str(j)+")) )\n")
         if (i+1<n-1):
             reds = ""
-            r = int(city[i][j][2][1])
-            for cont in range(0,r):
+            r = int(city[j][i][2][1])
+
+            # Se asignan los tiempos de manera aleatoria
+            ciclo = []
+            start = random.randint(0,9)
+            cont = 0
+            while cont < r:
+                if (start+cont>=10):
+                    ciclo.append(start+cont-10)
+                else:
+                    ciclo.append(start+cont)
+                cont+=1
+
+            for cont in ciclo:
                 reds = reds+"(t"+str(cont)+") "
-            outfile.write("\t(when (and (= ?destino i"+str(i)+str(j)+") (= ?origen i"+str(i+1)+str(j)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j)+")) (carro_"+str(i+1)+"_"+str(j)+")) )\n")
+            outfile.write("\t(when (and (= ?origen i"+str(i)+str(j)+") (= ?destino i"+str(i+1)+str(j)+") (or "+reds+")) (and (not (carro_"+str(i+1)+"_"+str(j)+")) (carro_"+str(i)+"_"+str(j)+")) )\n")
         if (j-1>=0):
             reds = ""
-            r = int(city[i][j][1][1])
-            for cont in range(0,r):
+            r = int(city[j][i][1][1])
+
+            # Se asignan los tiempos de manera aleatoria
+            ciclo = []
+            start = random.randint(0,9)
+            cont = 0
+            while cont < r:
+                if (start+cont>=10):
+                    ciclo.append(start+cont-10)
+                else:
+                    ciclo.append(start+cont)
+                cont+=1
+
+            for cont in ciclo:
                 reds = reds+"(t"+str(cont)+") "
-            outfile.write("\t(when (and (= ?destino i"+str(i)+str(j)+") (= ?origen i"+str(i)+str(j-1)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j)+")) (carro_"+str(i)+"_"+str(j-1)+")) )\n")
+            outfile.write("\t(when (and (= ?origen i"+str(i)+str(j)+") (= ?destino i"+str(i)+str(j-1)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j-1)+")) (carro_"+str(i)+"_"+str(j)+")) )\n")
         if (j+1<n-1):
             reds = ""
-            r = int(city[i][j][3][1])
-            for cont in range(0,r):
+            r = int(city[j][i][3][1])
+
+            # Se asignan los tiempos de manera aleatoria
+            ciclo = []
+            start = random.randint(0,9)
+            cont = 0
+            while cont < r:
+                if (start+cont>=10):
+                    ciclo.append(start+cont-10)
+                else:
+                    ciclo.append(start+cont)
+                cont+=1
+
+            for cont in ciclo:
                 reds = reds+"(t"+str(cont)+") "
-            outfile.write("\t(when (and (= ?destino i"+str(i)+str(j)+") (= ?origen i"+str(i)+str(j+1)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j)+")) (carro_"+str(i)+"_"+str(j+1)+")) )\n")
+            outfile.write("\t(when (and (= ?origen i"+str(i)+str(j)+") (= ?destino i"+str(i)+str(j+1)+") (or "+reds+")) (and (not (carro_"+str(i)+"_"+str(j+1)+")) (carro_"+str(i)+"_"+str(j)+")) )\n")
             
 # Ciclo del semaforo
 outfile.write("\n; Se rotan los tiempos del semaforo\n")

@@ -62,10 +62,12 @@ for i in range(0,N):
         else:
             if step != "":
                 break
+    step = int(step)
+    step = (step/2)+1
     res.append(step)
             
 for i in res:
-    fresult.write(i+" ")
+    fresult.write(str(i)+" ")
 fresult.write("\n\nPromedio: \n")
 
 sum = 0

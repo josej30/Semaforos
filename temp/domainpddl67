@@ -1,0 +1,77 @@
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Generado por genPddl.py 
+; Definicion del dominio de los semaforos 
+; Tamano: 3x3
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(define (domain SEMAFOROS)
+(:requirements :strips :typing :equality)
+(:predicates
+	(carro_0_0)
+	(carro_0_1)
+	(carro_0_2)
+	(carro_1_0)
+	(carro_1_1)
+	(carro_1_2)
+	(carro_2_0)
+	(carro_2_1)
+	(carro_2_2)
+	(t0) (t1) (t2) (t3) (t4) (t5) (t6) (t7) (t8) (t9) 
+	(turno_carro)
+	(turno_sem ?origen ?destino)
+)
+
+
+; Acciones del carro
+
+; 00este
+(:action carro_0_0
+	:parameters ()
+	:precondition (and (turno_carro) (carro_0_0))
+	:effect
+	(and (not (carro_0_0))
+		(carro_1_0)
+		(not (turno_carro))
+		(turno_sem i00 i10))
+)
+; 00sur
+(:action carro_0_0
+	:parameters ()
+	:precondition (and (turno_carro) (carro_0_0))
+	:effect
+	(and (not (carro_0_0))
+		(carro_0_1)
+		(not (turno_carro))
+		(turno_sem i00 i01))
+)
+; 01este
+(:action carro_0_1
+	:parameters ()
+	:precondition (and (turno_carro) (carro_0_1))
+	:effect
+	(and (not (carro_0_1))
+		(carro_1_1)
+		(not (turno_carro))
+		(turno_sem i01 i11))
+)
+; 01norte
+(:action carro_0_1
+	:parameters ()
+	:precondition (and (turno_carro) (carro_0_1))
+	:effect
+	(and (not (carro_0_1))
+		(carro_0_0)
+		(not (turno_carro))
+		(turno_sem i01 i00))
+)
+; 01sur
+(:action carro_0_1
+	:parameters ()
+	:precondition (and (turno_carro) (carro_0_1))
+	:effect
+	(and (not (carro_0_1))
+		(carro_0_2)
+		(not (turno_carro))
+		(turno_sem i01 i02))
+)

@@ -18,21 +18,3 @@ El archivo generado por genGrid.py consta de varias partes:
 	de los semáforos de esa intersección.
 
 --------------------------------------------------------------------------------
-
-El archivo modpddl.py se encarga de modificar el archivo de dominio pddl
-para incluir dentro de las proposiciones del pddl, los intervalos de tiempo
-que se generaron para cada semaforo con el genGrid.
-
---------------------------------------------------------------------------------
-
-El archivo restorepddl se encarga de regresar a su version original al dominio
-pddl para que no sobreescriba proposiciones ya que el planner no encontrara
-las soluciones
-
---------------------------------------------------------------------------------
-
-Hasta ahora todo esta hecho para ciudades de tamano 3x3 y si esta funcionando.
-Se observan diferencias notables usando el planner ff (que no da planes optimos)
-y el num2sat (que si da planes optimos). El numero de pasos se reduce de uno a otro
-
-

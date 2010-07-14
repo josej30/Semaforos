@@ -1,0 +1,23 @@
+Para probar el programa hace falta seguir varios pasos:
+
+- Ejecutar el generador de grid para generar por lo menos 
+un grid (ciudad) que utilice el programa. Esto se logra
+ejecutando ./genGrid.py junto a los argumentos que se
+indican al ejecutar el mismo.
+
+- Con el grid generado se procede a generar los pddls
+correspondientes (el dominio y el problema) con dos comandos
+./genPddlProblem.py y ./genPddlDomain.py.
+
+- Una vez que se tienen generados el dominio y el problema
+correspondiente al grid, se puede utilizar el planner que
+se quiera (probado con FF y Num2Sat). Los planificadores se
+encuentran en el directorio planners.
+
+- Si no se quiere ejecutar el planificador manualmente, se puede
+usar el programa que genera las corridas en los planificadores
+de manera automatica e iterativa. Estos se llaman ./runFF.py y
+./runNum2sat.py. Estos fueron los archivos utilizados para
+generar las estadísticas utilizadas en el informe.
+
+- Información extra en el archivo informacion.txt
